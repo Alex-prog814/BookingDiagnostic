@@ -24,33 +24,7 @@
    pip3 install -r requirements.txt
    ```
    
-3. Need to create a database
-
-    Type the following command:
-    
-    ```
-   sudo apt install postgres
-   sudo -i -u postgres
-   psql
-   ```
-   
-   then
-   
-   ```
-    CREATE DATABASE dbname;
-    ```
-   
-    after that go to the ***.env*** file and change the database settings to your database:
-    
-    ```
-    SECRET_KEY=generate your own secret key and paste here
-    DB_NAME=username
-    DB_USER=name of database
-    DB_PASSWORD=your password
-    DOMAIN=http://localhost:8000
-   ```
-   
-4. Migrations to the database
+3. Migrations to the database
 
     Type the command in the terminal:
     
@@ -64,23 +38,23 @@
     python3 manage.py migrate
     ```
    
-5. Create superuser
+4. Create superuser
 
     Enter the following command to create a superuser:
     
     ```
-   python3 manage.py createsuperuser
+   python3 manage.py super_user
    ```
     
     then enter the requested data
 
-6. Before start
+5. Before start
    Run test
    ```
    python3 manage.py test
    ```
     
-7. Server start
+6. Server start
 
     Enter the following command in terminal:
     
@@ -91,3 +65,10 @@
     Fine! Project is ready to use.
 
 #Docker Flow
+   ```
+   docker pull alexnazarenko570/booking
+   docker run --name booking -p 80:80 booking
+   ```
+   Data for admin panel:<br>
+   <b>email</b>: admin@gmail.com<br>
+   <b>password</b>: admin

@@ -5,10 +5,10 @@ User = get_user_model()
 
 
 class TestViews(TestSetUp):
-    # def test_get_booking_list(self):
-    #     """Get booking list"""
-    #     res = self.client.get(self.booking_list_url)
-    #     self.assertEqual(res.status_code, 200)
+    def test_get_booking_list(self):
+        """Get booking list"""
+        res = self.client.get(self.booking_list_url)
+        self.assertEqual(res.status_code, 200)
 
     def test_user_can_booking_time(self):
         """Auth user can booking time"""
